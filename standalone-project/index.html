@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Standalone Component</title>
+
+    <!-- Load the standalone component -->
+    <script src="/src/main.tsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const props = {
+        title: "External Component",
+        data: { foo: "bar" },
+      };
+
+      // Render the component once it's loaded
+      ReactDOM.render(
+        React.createElement(window.MyComponent, props),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
